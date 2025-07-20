@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #e4e4e4;
+        }
+        
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #00d4ff, #09f, #4e46e5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .skill-pill {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: scale(1.05);
+        }
+        
+        #terminal {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #333;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .terminal-header {
+            background-color: #222;
+            padding: 8px 12px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .terminal-body {
+            padding: 15px;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            height: 150px;
+            overflow-y: auto;
+        }
+        
+        .typewriter {
+            border-right: 2px solid #09f;
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #09f }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <nav class="fixed w-full bg-black bg-opacity-90 backdrop-blur-sm z-50 px-4 py-3 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/86ed67b8-007d-4641-9fcd-096e5724f608.png" alt="Digital lock icon with blue glowing effect" class="h-8 w-8" />
+                <span class="text-xl font-bold gradient-text">CYBER <span class="code-font">KING</span></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-400 transition">Home</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Work</a>
+                <a href="#certs" class="hover:text-blue-400 transition">Certs</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Cybersecurity</span><br>
+                    Specialist &<br>
+                    <span class="gradient-text">Security Trainer</span>
+                </h1>
+                <div class="flex space-x-3 mb-6">
+                    <div class="bg-blue-900 bg-opacity-60 px-3 py-1 rounded-full text-sm">Penetration Testing</div>
+                    <div class="bg-blue-900 bg-opacity-60 px-3 py-1 rounded-full text-sm">Security Training</div>
+                    <div class="bg-blue-900 bg-opacity-60 px-3 py-1 rounded-full text-sm">Cyber Investigations</div>
+                </div>
+                <p class="text-gray-300 mb-8 leading-relaxed">
+                    I secure digital infrastructures, train the next generation of security professionals, and investigate cyber threats.
+                    With 10+ years of experience across offensive security, training, and digital forensics, I help organizations build security-aware cultures.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#training" class="bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 rounded-md font-medium hover:shadow-lg transition">Training Programs</a>
+                    <a href="#investigations" class="border border-blue-500 text-blue-400 px-6 py-3 rounded-md font-medium hover:bg-blue-900 hover:bg-opacity-30 transition">View Cases</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-blue-500 rounded-xl blur-md opacity-20"></div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6e2b1dde-28f6-4cc9-80c4-9e6b28398af2.png" alt="Professional cybersecurity expert working on multiple monitors with code and network maps visible" class="relative rounded-lg max-w-md w-full" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Skills Section with Training and Investigations -->
+    <section id="skills" class="py-16 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 text-center">Technical <span class="gradient-text">Expertise</span></h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+                Comprehensive security capabilities from technical testing to training and investigations.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-gray-800 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 bg-opacity-50 p-2 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Penetration Testing</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Identifying and exploiting vulnerabilities in web apps, networks, and systems to improve security posture.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Burp Suite</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Metasploit</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">OWASP ZAP</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Nmap</div>
+                    </div>
+                </div>
+                
+                <!-- New Training Skills Card -->
+                <div class="bg-gray-800 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-900 bg-opacity-50 p-2 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Security Training</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Developing and delivering cybersecurity training programs for technical and non-technical audiences.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Course Design</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">CTFs</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Workshops</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Red Team Drills</div>
+                    </div>
+                </div>
+                
+                <!-- New Investigations Skills Card -->
+                <div class="bg-gray-800 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-900 bg-opacity-50 p-2 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Cyber Investigations</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Conducting digital forensics and incident response to uncover and mitigate security breaches.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Forensics</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Incident Response</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Malware Analysis</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Chain of Custody</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 bg-opacity-50 p-2 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Security Development</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Building secure applications and implementing DevSecOps practices in CI/CD pipelines.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Python</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Node.js</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">SAST/DAST</div>
+                        <div class="skill-pill bg-gray-700 px-3 py-1 rounded-full text-sm">Git</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs Section -->
+    <section id="training" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 text-center">Security <span class="gradient-text">Training Programs</span></h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+                Comprehensive cybersecurity education programs I've developed and delivered for organizations.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gray-800 relative">
+                        <img src="boot.webp" alt="Instructor leading cybersecurity workshop with participants working on laptops in classroom" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-purple-500 bg-opacity-10 hover:bg-opacity-20 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Enterprise Security Bootcamp</h3>
+                            <span class="bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded-full text-xs">1800+ trainees</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">
+                            8-week intensive program covering network security, secure coding, and incident response for Fortune 500 companies.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Hands-on Labs</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Red Team Exercises</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Custom Content</div>
+                        </div>
+                        <button class="text-purple-400 hover:text-purple-300 flex items-center text-sm">
+                            View Curriculum
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gray-800 relative">
+                        <img src="secure.jpeg" alt="Online cybersecurity course interface showing video lectures and virtual lab environment" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-purple-500 bg-opacity-10 hover:bg-opacity-20 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Secure Coding Masterclass</h3>
+                            <span class="bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded-full text-xs">3200+ students</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">
+                            Comprehensive secure development training covering OWASP Top 10, crypto implementations, and architectural security patterns.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Python/Java/JS</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Code Reviews</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">SAST Tools</div>
+                        </div>
+                        <button class="text-purple-400 hover:text-purple-300 flex items-center text-sm">
+                            Sample Modules
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investigations Section -->
+    <section id="investigations" class="py-16 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 text-center">Cyber <span class="gradient-text">Investigation Cases</span></h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+                Selected digital forensics and incident response engagements I've led.
+            </p>
+            
+            <div class="grid grid-cols-1 gap-8">
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-gray-900 relative">
+                            <img src="data.jpg" alt="Digital forensics workstation with multiple monitors showing disk analysis tools" class="w-full h-full min-h-[200px] object-cover" />
+                            <div class="absolute inset-0 bg-green-500 bg-opacity-10 hover:bg-opacity-20 transition"></div>
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">Banking Sector Data Breach</h3>
+                                <span class="bg-green-500 bg-opacity-20 text-green-400 px-2 py-1 rounded-full text-xs">2021</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">
+                                Led digital forensic investigation of financial institution breach affecting 250K customers. Identified APT group exploiting financial application vulnerabilities and established evidence trail leading to attribution.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <div class="bg-gray-700 px-2 py-1 rounded-full text-xs">Memory Forensics</div>
+                                <div class="bg-gray-700 px-2 py-1 rounded-full text-xs">Network Log Analysis</div>
+                                <div class="bg-gray-700 px-2 py-1 rounded-full text-xs">Malware Analysis</div>
+                            </div>
+                            <div class="mt-4">
+                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-300">Confidential Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-gray-900 relative">
+                            <img src="rr.jpg" alt="Incident response team analyzing network diagrams and forensic evidence in situation room" class="w-full h-full min-h-[200px] object-cover" />
+                            <div class="absolute inset-0 bg-green-500 bg-opacity-10 hover:bg-opacity-20 transition"></div>
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">Ransomware Attack Response</h3>
+                                <span class="bg-green-500 bg-opacity-20 text-green-400 px-2 py-1 rounded-full text-xs">2022</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">
+                                Directed incident response for manufacturing company hit by ransomware. Contained attack within 2 hours, restored systems without payment, and implemented security controls preventing future attacks of same vector.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <div class="bg-gray-700 px-2 py-1 rounded-full text-xs">Ransomware Analysis</div>
+                                <div class="bg-gray-700 px-2 py-1 rounded-full text-xs">Backup Recovery</div>
+                                <div class="bg-gray-700 px-2 py-1 rounded-full text-xs">Phishing Analysis</div>
+                            </div>
+                            <div class="flex space-x-4">
+                                <button class="text-green-400 hover:text-green-300 flex items-center text-sm">
+                                    Read Summary
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                                <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-300">NDA Protected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 text-center">Security <span class="gradient-text">Projects</span></h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+                Selected security assessments, research projects, and vulnerability discoveries.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gray-800 relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/646df6cb-13a1-44a3-bb47-b817975807cf.png" alt="Screenshot of network vulnerability scanning tool with identified security issues highlighted" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-blue-500 bg-opacity-10 hover:bg-opacity-20 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Network Pentest for Fortune 500</h3>
+                            <span class="bg-red-500 bg-opacity-20 text-red-400 px-2 py-1 rounded-full text-xs">2023</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">
+                            Conducted comprehensive penetration test of enterprise network infrastructure, identifying 14 critical vulnerabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Nmap</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Metasploit</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Custom Scripts</div>
+                        </div>
+                        <button class="text-blue-400 hover:text-blue-300 flex items-center text-sm">
+                            Read Case Study
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gray-800 relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ed59facd-ddc2-456f-bbba-876c4bdffefa.png" alt="Web application security dashboard showing vulnerability metrics and remediation progress" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-blue-500 bg-opacity-10 hover:bg-opacity-20 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Web App Security Audit</h3>
+                            <span class="bg-blue-500 bg-opacity-20 text-blue-400 px-2 py-1 rounded-full text-xs">2022</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">
+                            Full security assessment of high-traffic web application, identifying and helping remediate XSS and SQLi vulnerabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">Burp Suite</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">OWASP Top 10</div>
+                            <div class="bg-gray-800 px-2 py-1 rounded-full text-xs">JavaScript</div>
+                        </div>
+                        <button class="text-blue-400 hover:text-blue-300 flex items-center text-sm">
+                            Read Case Study
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certs" class="py-16 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 text-center">Professional <span class="gradient-text">Certifications</span></h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+                Industry-recognized certifications validating my cybersecurity expertise.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a40e9ea3-0289-4f38-9f38-dc7ab0dfdbf8.png" alt="Offensive Security Certified Professional (OSCP) certification badge" class="h-16 w-16 mr-4" />
+                        <div>
+                            <h3 class="font-bold text-lg">OSCP</h3>
+                            <p class="text-gray-400 text-sm">Offensive Security</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Practical penetration testing skills certification requiring hands-on exploitation of multiple systems.
+                    </p>
+                    <div class="text-xs text-gray-500">Earned: June 2019</div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <img src="CISSP.jpg" alt="Certified Information Systems Security Professional (CISSP) certification badge with gold frame" class="h-16 w-16 mr-4" />
+                        <div>
+                            <h3 class="font-bold text-lg">CISSP</h3>
+                            <p class="text-gray-400 text-sm">(ISC)²</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Gold standard certification demonstrating expertise in designing and managing security programs.
+                    </p>
+                    <div class="text-xs text-gray-500">Earned: March 2021</div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <img src="giac.png" alt="GIAC Certified Incident Handler (GCIH) certification badge with digital security imagery" class="h-16 w-16 mr-4" />
+                        <div>
+                            <h3 class="font-bold text-lg">GCIH</h3>
+                            <p class="text-gray-400 text-sm">GIAC</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Validation of skills in detecting, responding to and resolving computer security incidents.
+                    </p>
+                    <div class="text-xs text-gray-500">Earned: October 2020</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 text-center">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+                Interested in security consulting, training, or investigations? Reach out to discuss your needs.
+            </p>
+            
+            <div class="bg-gray-900 rounded-xl p-8 max-w-3xl mx-auto">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="subject" class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                            <select id="subject" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="" disabled selected>Select inquiry type</option>
+                                <option value="pentest">Penetration Testing</option>
+                                <option value="training">Security Training</option>
+                                <option value="investigation">Incident Response</option>
+                                <option value="consulting">General Consulting</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell me about your security needs"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <button type="submit" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition w-full md:w-auto">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black bg-opacity-80 py-8 px-4 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/86ed67b8-007d-4641-9fcd-096e5724f608.png" alt="Digital lock icon with blue glowing effect" class="h-8 w-8" />
+                    <span class="text-xl font-bold gradient-text">SECURE<span class="code-font">DEV</span></span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                &copy; 2023 SecureDev Cybersecurity Services. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Terminal typing effect
+            const terminal = document.createElement('div');
+            terminal.innerHTML = `
+                <div class="mb-4" id="terminal">
+                    <div class="terminal-header flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="terminal-body font-mono">
+                        <span id="typewriter" class="typewriter"></span>
+                    </div>
+                </div>
+            `;
+            document.querySelector('#home').appendChild(terminal);
+            
+            const messages = [
+                '> Initializing security assessment...',
+                '> Scanning for vulnerabilities...',
+                '> Threat analysis complete',
+                '> Systems secured',
+                '> Ready for training and engagements'
+            ];
+            let i = 0, j = 0;
+            let currentMessage = '';
+            let isDeleting = false;
+            let isEnd = false;
+
+            function type() {
+                isEnd = false;
+                currentMessage = messages[i];
+
+                if (isDeleting) {
+                    document.getElementById('typewriter').innerHTML = currentMessage.substring(0, j) + '<span class="typewriter"></span>';
+                    j--;
+                    
+                    if (j === 0) {
+                        isDeleting = false;
+                        i++;
+                        if (i === messages.length) i = 0;
+                    }
+                } else {
+                    document.getElementById('typewriter').innerHTML = currentMessage.substring(0, j) + '<span class="typewriter"></span>';
+                    j++;
+                    
+                    if (j === currentMessage.length) {
+                        isEnd = true;
+                        isDeleting = true;
+                    }
+                }
+
+                const time = isEnd ? 2000 : isDeleting ? 50 : 100;
+                setTimeout(type, time);
+            }
+
+            setTimeout(type, 1000);
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Mobile menu toggle would go here
+        });
+    </script>
+</body>
+</html>
